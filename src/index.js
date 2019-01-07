@@ -1,11 +1,13 @@
 //引入vue
 import Vue from 'vue'
-
 //引入路由
 import VueRouter from 'vue-router'
 //按需引入mint-ui
 import 'mint-ui/lib/style.css'
 import { Header,Tabbar,Cell, TabItem,TabContainer, TabContainerItem  } from 'mint-ui'
+//引入mui
+import './lib/mui/css/mui.min.css'
+import './lib/mui/js/mui.min.js'
 //引入主组件
 import app from './app.vue'
 import index from './sonVue/index.vue'

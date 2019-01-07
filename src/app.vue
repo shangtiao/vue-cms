@@ -1,24 +1,28 @@
 <template>
   <div class="app-container">
-      <mt-header fixed title="vue-cms"></mt-header>
+      <mt-header fixed title="黑马前端33期·Vue"></mt-header>
       <transition name="rT">
         <router-view></router-view>
       </transition>
       <mt-tabbar :fixed="true" v-model="selected">
         <mt-tab-item id="主页">
-          <img slot="icon" src="./images/tabs04.png">
+          <!-- <img slot="icon" src="./images/tabs04.png"> -->
+          <span slot="icon" class="mui-icon mui-icon-home"></span>
           主页
         </mt-tab-item>
         <mt-tab-item id="订单">
-          <img slot="icon" src="./images/tabs04.png">
+          <!-- <img slot="icon" src="./images/tabs04.png"> -->
+          <span slot="icon" class="mui-icon mui-icon-star"></span>
           订单
         </mt-tab-item>
         <mt-tab-item id="发现">
-          <img slot="icon" src="./images/tabs04.png">
+          <span slot="icon" class="mui-icon mui-icon-search"></span>
+          <!-- <img slot="icon" src="./images/tabs04.png"> -->
           发现
         </mt-tab-item>
         <mt-tab-item id="我的">
-          <img slot="icon" src="./images/tabs04.png">
+          <span slot="icon" class="mui-icon mui-icon-person"></span>
+          <!-- <img slot="icon" src="./images/tabs04.png"> -->
           我的
         </mt-tab-item>
       </mt-tabbar>
@@ -79,8 +83,12 @@ export default {
 
 <style scoped>
   .app-container {
-    padding-top: 40px;
+    padding-top: 50px;
     position: relative;
+    overflow: hidden;
+  }
+  .mint-header {
+    height: 50px;
   }
   .rT-enter ,
   .rT-leave-to {
@@ -94,5 +102,9 @@ export default {
   }
   .mint-tabbar > .mint-tab-item.is-selected {
     background-color: transparent;
+  }
+  a {
+    color: #000;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
   }
 </style>
